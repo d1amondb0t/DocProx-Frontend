@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="header">
+    <nav >
       <ul>
         <p>test</p>
         <li>Home</li>
@@ -8,7 +8,7 @@ const Header = () => {
         <li>Logout</li>
         <li>Options</li>
       </ul>
-    </header>
+    </nav>
   )
 }
 
