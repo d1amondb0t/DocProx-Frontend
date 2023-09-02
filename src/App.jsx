@@ -1,12 +1,29 @@
-import Navbar from "./components/Navbar";
-import Login from "./components/Login";
+import { useState} from 'react';
 import AddDocument from "./components/AddDocument";
-import Hero from "./components/Hero";
 
-function App() {
+function App(props) {
+  const [addFile, setAddFile] = useState()
+
+  const onAddDocument = ({title, file}) => {
+    console.log(file)
+    //addDocument(formData)
+  }
+
+  const addDocument = async (formData) => {
+    // const res = await fetch("http://localhost:8000/documents/", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "multipart/form-data",
+    //   },
+    //   body: formData,
+    // })
+    // const data = await res.json()
+    // console.log(data)
+  }
+
   return (
     <>
-      <AddDocument/>
+      <AddDocument onAdd={onAddDocument}/>
     </>
   );
 }
